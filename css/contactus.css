@@ -1,0 +1,5 @@
+
+
+#nameAlert, #emailAlert, #phoneAlert, #ageAlert, #passwordAlert, #rePasswordAlert {
+    display: none;
+}
