@@ -1,13 +1,13 @@
 
 
-$(document).ready(function () {
-    $(".sk-folding-cube").fadeOut(50, function () {
-        $("#loading").fadeOut(50, function () {
-            $("body").css("overflow", "auto");
-        })
-    })
+// $(document).ready(function () {
+//     $(".sk-folding-cube").fadeOut(50, function () {
+//         $("#loading").fadeOut(50, function () {
+//             $("body").css("overflow", "auto");
+//         })
+//     })
     
-})
+// })
 
 
 
@@ -39,6 +39,14 @@ $("#close-open").click(function(){
 async function getAllMeals() {
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`);
     let finalResult = await response.json();
+    $(document).ready(function () {
+        $(".sk-folding-cube").fadeOut(50, function () {
+            $("#loading").fadeOut(50, function () {
+                $("body").css("overflow", "auto");
+            })
+        })
+        
+    })
     return finalResult;
 }
 

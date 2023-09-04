@@ -6,6 +6,14 @@ console.log(mealId);
 async function getMealById(id) {
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
     let finalResult = await response.json();
+    $(document).ready(function () {
+        $(".sk-folding-cube").fadeOut(50, function () {
+            $("#loading").fadeOut(50, function () {
+                $("body").css("overflow", "auto");
+            })
+        })
+        
+    })
     return finalResult;
 }
 
@@ -21,7 +29,7 @@ function display(data) {
     $("#mealYoutube").attr("href", data[0].strYoutube);
     let box = ``;
     for (let i = 0; i < 20; i++) {
-        if (data[0][`strMeasure${i+1}`] == "" || data[0][`strIngredient${i+1}`] == "") {
+        if (data[0][`strMeasure${i+1}`] == "" || data[0][`strMeasure${i+1}`] == null || data[0][`strIngredient${i+1}`] == "" || data[0][`strIngredient${i+1}`] == null) {
             continue;
         }
         else {

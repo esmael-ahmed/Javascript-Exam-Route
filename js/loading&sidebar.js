@@ -1,13 +1,13 @@
 
 
-$(document).ready(function () {
-    $(".sk-folding-cube").fadeOut(50, function () {
-        $("#loading").fadeOut(50, function () {
-            $("body").css("overflow", "auto");
-        })
-    })
+// $(document).ready(function () {
+//     $(".sk-folding-cube").fadeOut(50, function () {
+//         $("#loading").fadeOut(50, function () {
+//             $("body").css("overflow", "auto");
+//         })
+//     })
     
-});
+// });
 
 
 

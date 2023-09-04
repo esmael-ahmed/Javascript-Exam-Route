@@ -2,6 +2,14 @@
 async function getAllIngrediants() {
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`);
     let finalResult = await response.json();
+    $(document).ready(function () {
+        $(".sk-folding-cube").fadeOut(50, function () {
+            $("#loading").fadeOut(50, function () {
+                $("body").css("overflow", "auto");
+            })
+        })
+        
+    })
     return finalResult;
 }
 
