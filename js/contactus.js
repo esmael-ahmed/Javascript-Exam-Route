@@ -1,5 +1,12 @@
 
-
+$(document).ready(function () {
+    $(".sk-folding-cube").fadeOut(50, function () {
+        $("#loading").fadeOut(50, function () {
+            $("body").css("overflow", "auto");
+        })
+    })
+    
+});
 const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');
 const userPhone = document.getElementById('userPhone');

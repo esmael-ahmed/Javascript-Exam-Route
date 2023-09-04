@@ -1,5 +1,13 @@
 
 
+$(document).ready(function () {
+    $(".sk-folding-cube").fadeOut(50, function () {
+        $("#loading").fadeOut(50, function () {
+            $("body").css("overflow", "auto");
+        })
+    })
+    
+});
 // let mealName = $("#searchByName").val();
 // let mealFLetter = $("#searchByFL").val();
 let mealName = document.getElementById("searchByName");
@@ -8,28 +16,12 @@ let mealFLetter = document.getElementById("searchByFL");
 async function searchByName(name) {
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`);
     let finalResult = await response.json();
-    $(document).ready(function () {
-        $(".sk-folding-cube").fadeOut(50, function () {
-            $("#loading").fadeOut(50, function () {
-                $("body").css("overflow", "auto");
-            })
-        })
-        
-    })
     return finalResult;
 }
 
 async function searchByFirstLetter(letter) {
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
     let finalResult = await response.json();
-    $(document).ready(function () {
-        $(".sk-folding-cube").fadeOut(50, function () {
-            $("#loading").fadeOut(50, function () {
-                $("body").css("overflow", "auto");
-            })
-        })
-        
-    })
     return finalResult;
 }
 
